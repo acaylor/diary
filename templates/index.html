@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to Journal {% endblock %}</h1>
+    {% for entry in entries %}
+        <a href="{{ url_for('entry', entry_id=entry['id']) }}">
+            <h2>{{ entry['title'] }}</h2>
+        </a>
+        <span class="badge rounded-pill text-bg-dark">{{ entry['created'] }}</span>
+        <a href="{{ url_for('edit', id=entry['id']) }}">
+            <span class="badge badge-warning">Edit</span>
+        </a>
+        <hr>
+    {% endfor %}
+{% endblock %}

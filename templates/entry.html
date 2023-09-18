@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %} {{ entry['title'] }} {% endblock %}</h2>
+    <span class="badge rounded-pill text-bg-primary">{{ entry['created'] }}</span>
+    <p>{{ entry['content'] }}</p>
+{% endblock %}
