@@ -1,0 +1,16 @@
+[project]
+name = "diary"
+version = "0.1.0"
+description = "Basic diary app with Flask and sqlite"
+dependencies = ["flask==3.0.0"]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["diary"]
